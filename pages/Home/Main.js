@@ -17,7 +17,7 @@ const Main = () => {
             <motion.a className={style.Card} layoutId={img}>
               <Image
                 // loader={myLoader}
-                src={"/../public/images/" + img + ".jpg"} // Route of the image file
+                src={"/images/" + img + ".jpg"} // Route of the image file
                 height={450} // Desired size with correct aspect ratio
                 width={524} // Desired size with correct aspect ratio
                 layout="responsive"

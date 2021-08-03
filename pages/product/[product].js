@@ -22,19 +22,13 @@ const Product = () => {
           property="og:description"
           content={"page transition - " + product}
         />
-        <meta
-          property="image"
-          content={"/../public/images/" + product + ".jpg"}
-        />
+        <meta property="image" content={"/images/" + product + ".jpg"} />
         <meta property="title" content={"page transition - " + product} />
         <meta
           property="og:description"
           content={"page transition - " + product}
         />
-        <meta
-          property="og:image"
-          content={"/../public/images/" + product + ".jpg"}
-        />
+        <meta property="og:image" content={"/images/" + product + ".jpg"} />
       </Head>
       <main className={style.Container}>
         <motion.h1 className={style.Title} layoutId="header">
@@ -45,7 +39,7 @@ const Product = () => {
           layoutId={product}
         >
           <Image
-            src={"/../public/images/" + product + ".jpg"} // Route of the image file
+            src={"/images/" + product + ".jpg"} // Route of the image file
             height={450} // Desired size with correct aspect ratio
             width={524} // Desired size with correct aspect ratio
             layout="responsive"
