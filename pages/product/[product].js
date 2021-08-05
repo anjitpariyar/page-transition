@@ -16,19 +16,46 @@ const Product = () => {
     <>
       <Head>
         <title>Page Transition - {product}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="title" content={"page transition - " + product} />
+      </Head>
+      <Head>
+        <meta
+          property="og:title"
+          content={"page transition - " + product}
+          key="ogtitle"
+        />
         <meta
           property="og:description"
           content={"page transition - " + product}
+          key="ogdescription"
         />
-        <meta property="image" content={"/images/" + product + ".jpg"} />
-        <meta property="title" content={"page transition - " + product} />
+        <meta
+          property="image"
+          content={"/images/" + product + ".jpg"}
+          key="image"
+        />
+        <meta
+          property="title"
+          content={"page transition - " + product}
+          key="title"
+        />
         <meta
           property="og:description"
           content={"page transition - " + product}
+          key="ogdescription"
         />
-        <meta property="og:image" content={"/images/" + product + ".jpg"} />
+        <meta
+          property="og:image"
+          content={"/images/" + product + ".jpg"}
+          key="ogimage"
+        />
+        <meta
+          property="image"
+          content={"/images/" + product + ".jpg"}
+          key="image"
+        />
+        <meta property="og:url" content={window.location} key="url" />
+        <meta property="og:type" content="website" key="type" />
+        <meta property="og:locale" content="en_GB" key="locale" />
       </Head>
       <main className={style.Container}>
         <motion.h1 className={style.Title} layoutId="header">
