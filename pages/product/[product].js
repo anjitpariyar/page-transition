@@ -1,5 +1,6 @@
 import style from "../../styles/home.module.scss";
 import style2 from "../../styles/product.module.scss";
+import Title from "../../Components/Title";
 
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -16,8 +17,7 @@ const Product = () => {
     <>
       <Head>
         <title>Page Transition - {product}</title>
-      </Head>
-      <Head>
+
         <meta
           property="og:title"
           content={"page transition - " + product}
@@ -30,7 +30,7 @@ const Product = () => {
         />
         <meta
           property="image"
-          content={"/images/" + product + ".jpg"}
+          content={"../../public/images/" + product + ".jpg"}
           key="image"
         />
         <meta
@@ -45,7 +45,7 @@ const Product = () => {
         />
         <meta
           property="og:image"
-          content={"/images/" + product + ".jpg"}
+          content={"../../public/images/" + product + ".jpg"}
           key="ogimage"
         />
         <meta
@@ -53,14 +53,18 @@ const Product = () => {
           content={"/images/" + product + ".jpg"}
           key="image"
         />
-        <meta property="og:url" content={window.location} key="url" />
+        <meta
+          property="og:url"
+          content={"https://page-transition-pi.vercel.app/product/" + product}
+          key="url"
+        />
         <meta property="og:type" content="website" key="type" />
         <meta property="og:locale" content="en_GB" key="locale" />
       </Head>
+
       <main className={style.Container}>
-        <motion.h1 className={style.Title} layoutId="header">
-          My {product}
-        </motion.h1>
+        <Title text={"My" + product} arc={120} radius={300} />
+
         <motion.div
           className={style.Card + " " + style2.Card}
           layoutId={product}

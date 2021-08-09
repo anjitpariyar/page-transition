@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 // const myLoader = ({ src, width, quality }) => {
 //   return `https://i1.wp.com/angularscript.com/wp-content/uploads/2018/06/Progressively-Loading-Images-With-Blur-Effect-min.png?resize=800%2C455&ssl=1`;
 // };
+import Title from "../../Components/Title";
 const Main = () => {
   return (
     <div className={style.Container}>
-      <motion.h1 className={style.Title} layoutId="header">
-        Click one of Us
-      </motion.h1>
+      <Title text="Click one of us" arc={120} radius={300} />
       <section className={style.Grid}>
         {["ig", "wallpaint"].map((img, index) => (
           <Link href={"product/" + img} key={img + "-" + index}>

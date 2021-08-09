@@ -37,6 +37,15 @@
   @include sm {
     font-size: 2rem;
   }
+  svg {
+    path {
+      fill: transparent;
+    }
+    textPath {
+      text-decoration: underline;
+      font-size: 1.4em;
+    }
+  }
 }
 
 .Title,
